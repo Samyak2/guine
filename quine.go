@@ -1,15 +1,17 @@
 package main
 
+// this is a quine in go by Samyak
+
 import (
 	"fmt"
 )
 
 func main() {
-	s1 := "package main%c%cimport (%c	%cfmt%c%c)%c%cfunc main() {%c"
+	s1 := "package main%c%c// this is a quine in go by Samyak%c%cimport (%c	%cfmt%c%c)%c%cfunc main() {%c"
 	s2 := "	s%c := %c%s%c%c"
 	s3 := "	%c := %c%c%c%c%c"
 	s4 := "	fmt.Printf("
-	s5 := "%ss1, n, n, n, q, q, n, n, n, n);%ss2, '1', q, s1, q, n)%c"
+	s5 := "%ss1, n, n, n, n, n, q, q, n, n, n, n);%ss2, '1', q, s1, q, n)%c"
 	s6 := "%ss2, '2', q, s2, q, n);%ss2, '3', q, s3, q, n)%c"
 	s7 := "%ss2, '4', q, s4, q, n);%ss2, '5', q, s5, q, n)%c"
 	s8 := "%ss2, '6', q, s6, q, n);%ss2, '7', q, s7, q, n)%c"
@@ -34,7 +36,7 @@ func main() {
 	q := '"' 
 	r := '\''
 	c := '\\'
-	fmt.Printf(s1, n, n, n, q, q, n, n, n, n);	fmt.Printf(s2, '1', q, s1, q, n)
+	fmt.Printf(s1, n, n, n, n, n, q, q, n, n, n, n);	fmt.Printf(s2, '1', q, s1, q, n)
 	fmt.Printf(s2, '2', q, s2, q, n);	fmt.Printf(s2, '3', q, s3, q, n)
 	fmt.Printf(s2, '4', q, s4, q, n);	fmt.Printf(s2, '5', q, s5, q, n)
 	fmt.Printf(s2, '6', q, s6, q, n);	fmt.Printf(s2, '7', q, s7, q, n)
