@@ -26,7 +26,7 @@ func TestQuine(t *testing.T) {
 
 	for i := range out {
 		if outS[i] != progS[i] {
-			t.Errorf("Mismatch: at index %d, output is %v while actual program is %v", i, outS[i], progS[i])
+			t.Errorf("Mismatch: at index %d, output is %c while actual program is %c", i, outS[i], progS[i])
 		}
 	}
 }
